@@ -1,0 +1,218 @@
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.List;
+import java.util.Scanner;
+ 
+public class RR {
+	public static void main(String[] args) {
+
+//READING DATA FROM A FILE
+
+		try {
+			List<String> file = Files.readAllLines(Paths.get("C:\\Users\\marys\\OneDrive\\Pulpit\\MOTOROLA\\innyzapis\\word.txt"));		
+		} catch (IOException e) {
+     	}
+
+//DATA BOARD
+String[][] mBoard = new String[5][5];
+
+mBoard[0][0] = "  ";
+mBoard[0][1] = "1 ";
+mBoard[0][2] = "2 ";
+mBoard[0][3] = "3 ";
+mBoard[0][4] = "4 ";
+
+mBoard[1][0] = "A ";
+mBoard[1][1] = "X ";
+mBoard[1][2] = "X ";
+mBoard[1][3] = "X ";
+mBoard[1][4] = "X ";
+
+mBoard[2][0] = "B ";
+mBoard[2][1] = "X ";
+mBoard[2][2] = "X ";
+mBoard[2][3] = "X ";
+mBoard[2][4] = "X ";
+
+mBoard[3][0] = "C ";
+mBoard[3][1] = "X ";
+mBoard[3][2] = "X ";
+mBoard[3][3] = "X ";
+mBoard[3][4] = "X ";
+
+mBoard[4][0] = "D ";
+mBoard[4][1] = "X ";
+mBoard[4][2] = "X ";
+mBoard[4][3] = "X ";
+mBoard[4][4] = "X ";
+
+  System.out.println("Oto Twoja tablica H:");
+
+	System.out.print(mBoard[0][0]);
+	System.out.print(mBoard[0][1]);
+	System.out.print(mBoard[0][2]);
+	System.out.print(mBoard[0][3]);
+	System.out.println(mBoard[0][4]);
+
+	System.out.print(mBoard[1][0]);
+	System.out.print(mBoard[1][1]);
+	System.out.print(mBoard[1][2]);
+	System.out.print(mBoard[1][3]);
+	System.out.println(mBoard[1][4]);
+
+	System.out.print(mBoard[2][0]);
+	System.out.print(mBoard[2][1]);
+	System.out.print(mBoard[2][2]);
+	System.out.print(mBoard[2][3]);
+	System.out.println(mBoard[2][4]);
+
+	System.out.print(mBoard[3][0]);
+	System.out.print(mBoard[3][1]);
+	System.out.print(mBoard[3][2]);
+	System.out.print(mBoard[3][3]);
+	System.out.println(mBoard[3][4]);
+
+	System.out.print(mBoard[4][0]);
+	System.out.print(mBoard[4][1]);
+	System.out.print(mBoard[4][2]);
+	System.out.print(mBoard[4][3]);
+	System.out.println(mBoard[4][4]);
+
+//CHOICE OF GAME LEVEL
+
+
+        System.out.println("Welcome to the game, what mode do you want to test yourself on?");
+        System.out.println("Easy mode: 4 words to discover, 10 chances to guess all the words");
+        System.out.println("Hard mode: 8 words to discover, 15 chances to guess all the words");
+        System.out.print("I want to choose easy (E) or difficult (H) level of the game (enter letter E or H as appropriate): ");
+
+        String tryb = getString();   
+
+//DISPLAY OF THE BOARD
+
+if (tryb == "E") {
+
+String[][] EBoard = new String[3][5];
+
+EBoard[0][0] = "  ";
+EBoard[0][1] = "1 ";
+EBoard[0][2] = "2 ";
+EBoard[0][3] = "3 ";
+EBoard[0][4] = "4 ";
+
+EBoard[1][0] = "A ";
+EBoard[1][1] = "X ";
+EBoard[1][2] = "X ";
+EBoard[1][3] = "X ";
+EBoard[1][4] = "X ";
+
+EBoard[2][0] = "B ";
+EBoard[2][1] = "X ";
+EBoard[2][2] = "X ";
+EBoard[2][3] = "X ";
+EBoard[2][4] = "X ";
+
+  System.out.println("Here's your E table:");
+
+	System.out.print(EBoard[0][0]);
+	System.out.print(EBoard[0][1]);
+	System.out.print(EBoard[0][2]);
+	System.out.print(EBoard[0][3]);
+	System.out.println(EBoard[0][4]);
+
+	System.out.print(EBoard[1][0]);
+	System.out.print(EBoard[1][1]);
+	System.out.print(EBoard[1][2]);
+	System.out.print(EBoard[1][3]);
+	System.out.println(EBoard[1][4]);
+
+	System.out.print(EBoard[2][0]);
+	System.out.print(EBoard[2][1]);
+	System.out.print(EBoard[2][2]);
+	System.out.print(EBoard[2][3]);
+	System.out.println(EBoard[2][4]);
+
+} else {
+
+String[][] HBoard = new String[5][5];
+
+HBoard[0][0] = "  ";
+HBoard[0][1] = "1 ";
+HBoard[0][2] = "2 ";
+HBoard[0][3] = "3 ";
+HBoard[0][4] = "4 ";
+
+HBoard[1][0] = "A ";
+HBoard[1][1] = "X ";
+HBoard[1][2] = "X ";
+HBoard[1][3] = "X ";
+HBoard[1][4] = "X ";
+
+HBoard[2][0] = "B ";
+HBoard[2][1] = "X ";
+HBoard[2][2] = "X ";
+HBoard[2][3] = "X ";
+HBoard[2][4] = "X ";
+
+HBoard[3][0] = "C ";
+HBoard[3][1] = "X ";
+HBoard[3][2] = "X ";
+HBoard[3][3] = "X ";
+HBoard[3][4] = "X ";
+
+HBoard[4][0] = "D ";
+HBoard[4][1] = "X ";
+HBoard[4][2] = "X ";
+HBoard[4][3] = "X ";
+HBoard[4][4] = "X ";
+
+  System.out.println("Here's your H table:");
+
+	System.out.print(HBoard[0][0]);
+	System.out.print(HBoard[0][1]);
+	System.out.print(HBoard[0][2]);
+	System.out.print(HBoard[0][3]);
+	System.out.println(HBoard[0][4]);
+
+	System.out.print(HBoard[1][0]);
+	System.out.print(HBoard[1][1]);
+	System.out.print(HBoard[1][2]);
+	System.out.print(HBoard[1][3]);
+	System.out.println(HBoard[1][4]);
+
+	System.out.print(HBoard[2][0]);
+	System.out.print(HBoard[2][1]);
+	System.out.print(HBoard[2][2]);
+	System.out.print(HBoard[2][3]);
+	System.out.println(HBoard[2][4]);
+
+	System.out.print(HBoard[3][0]);
+	System.out.print(HBoard[3][1]);
+	System.out.print(HBoard[3][2]);
+	System.out.print(HBoard[3][3]);
+	System.out.println(HBoard[3][4]);
+
+	System.out.print(HBoard[4][0]);
+	System.out.print(HBoard[4][1]);
+	System.out.print(HBoard[4][2]);
+	System.out.print(HBoard[4][3]);
+	System.out.println(HBoard[4][4]);
+
+}
+
+//PLAYER'S CHOICE OF LOCATION:
+    System.out.print("Select the first location, e.g. A1: ");
+    String location= getString();
+    Scanner reading = new Scanner(System.in);
+    System.out.println("The value of the card "+ mBoard[4][4]);	
+  	String A1 = "some data";
+
+if (location == A1) {
+      System.out.print("Interesting choice");
+    }
+	}
+ public static String getString() {
+    return new Scanner(System.in).next();
+  }
+}
